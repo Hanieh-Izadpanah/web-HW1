@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+    <link rel="stylesheet" href="../css/Login.css">
+    <link rel="stylesheet" href="../css/global.css">
+
+    <style>
+        body{
+            background-color: #dae0e5;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="white-square" id="register">
+
+    <!--START FORM-->
+    <div class="form-square">
+        <form>
+            <br><br>
+            <div class="row">
+                <div class="name-image"></div>
+                <input placeholder="نام و نام خانوادگی" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'نام و نام خانوادگی'" id="name" type="text" class="validate" required>
+                <label class="label" for="name">نام و نام خانوادگی</label>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="email-image"></div>
+                <input placeholder="پست الکترونیک" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'پست الکترونیک'" id="email" type="email" onkeyup="checkEmail()" class="validate" required>
+                <label class="label" for="email">پست الکترونیک</label>
+            </div>
+            <br>
+            <div id="error-nw1" class="error-message"></div>
+            <br><br>
+            <div class="row">
+                <div class="pass-image"></div>
+                <input placeholder="رمز عبور" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'رمز عبور'" id="password" type="password" onkeyup="checkPass()"class="validate" required>
+                <label class="label" for="password">رمز عبور</label>
+            </div>
+            <br>
+            <div id="error-nw2" class="error-message"></div>
+            <br><br>
+            <div class="row">
+                <div class="pass-image"></div>
+                <input placeholder="تکرار رمز عبور" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'تکرار رمز عبور'" id="repeat-pass" type="password" onkeyup="checkPass()" class="validate" required>
+                <label class="label" for="repeat-pass">تکرار رمز عبور</label>
+            </div>
+            <br>
+            <div id="error-nw3" class="error-message"></div>
+        </form>
+        <!--END FORM-->
+
+        <!--START REGISTER BUTTON-->
+        <div>
+            <button class="register-button">
+                ثبت نام
+            </button>
+        </div>
+        <!--END REGISTER BUTTON-->
+
+        <!--START REGISTER WITH GOOGLE ACCOUNT-->
+        <div>
+
+            <button class="register-google-button">
+                ثبت نام با حساب کاربری گوگل
+            </button>
+        </div>
+        <!--END REGISTER WITH GOOGLE ACCOUNT-->
+
+    </div>
+    <!--END FORM-->
+
+    <!--START GREEN-SQUARE-->
+    <div class="green-square">
+        <div id="green-square-register-image">
+
+        </div>
+        <div id="green-square-register-titleContent">
+            <b>
+                قبلا عضو شدی؟
+            </b>
+        </div>
+        <div id="green-square-register-textContent">
+            برای ورود به سایت، بر روی فلش زیر کلیک کن!
+        </div>
+        <button id="green-square-gotoLogin-button" type="button" onclick="gotoLoginPage()">
+
+        </button>
+    </div>
+    <!--END GREEN-SQUARE-->
+
+</div>
+
+<div class="white-square" id="login">
+
+    <!--START FORM-->
+    <div class="form-square">
+        <form>
+            <br><br>
+            <div class="row middle1" >
+                <div class="email-image"></div>
+                <input placeholder="پست الکترونیک" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'پست الکترونیک'" pattern=".+@globex.com" id="email" type="email" class="validate" required>
+                <label class="label" for="email">پست الکترونیک</label>
+            </div>
+            <br><br>
+            <div class="row middle2">
+                <div class="pass-image"></div>
+                <input placeholder="رمز عبور" onfocus="this.placeholder = ''"
+                       onblur="this.placeholder = 'رمز عبور'" id="password" type="password" class="validate" required>
+                <label class="label" for="password">رمز عبور</label>
+            </div>
+            <br><br>
+        </form>
+        <!--END FORM-->
+
+        <!--START REGISTER BUTTON-->
+        <div>
+            <button class="register-button">
+                ورود
+            </button>
+        </div>
+        <!--END REGISTER BUTTON-->
+
+        <!--START REGISTER WITH GOOGLE ACCOUNT-->
+        <div>
+            <button class="register-google-button">
+                ورود با حساب کاربری گوگل
+            </button>
+        </div>
+        <!--END REGISTER WITH GOOGLE ACCOUNT-->
+    </div>
+    <!--END FORM-->
+
+    <!--START GREEN-SQUARE-->
+    <div class="green-square">
+        <div id="green-square-register-image">
+
+        </div>
+        <div id="green-square-register-titleContent">
+            <b>
+                عضو سایت نیستی؟
+            </b>
+        </div>
+        <div id="green-square-register-textContent">
+            با کلیک روی فلش زیر میتونی رایگان ثبت نام کنی!
+        </div>
+        <button id="green-square-gotoRegister-button" type="button" onclick="gotoRegisterPage()">
+        </button>
+    </div>
+    <!--END GREEN-SQUARE-->
+
+</div>
+
+</body>
+</html>

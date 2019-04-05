@@ -1,0 +1,142 @@
+ul.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #50b359;
+    display: flex;
+    justify-content: space-between;
+    z-index:10;
+
+}
+ul.inside{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    position: relative;
+    z-index:10;
+}
+ul.outside{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+li.nav {
+    display: flex;
+    justify-content: flex-start;
+}
+img.nav{
+    display: flex;
+    justify-content: flex-start;
+}
+ul a.navigate {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 20px;
+    font-family: "B Mitra";
+    text-align: center;
+    padding: 15px 12px;
+    text-decoration: none;
+}
+
+ul a.navigate:hover {
+    background-color: #1b5e20;
+}
+
+ul a.navigate.active{
+    background-color: palegreen;
+}
+
+text{
+    display: block;
+    color: white;
+    font-family: "B Mitra";
+    text-align: center;
+    font-size: 14px;
+    padding: 15px 0;
+}
+
+li.outside{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #50b359;
+    border-block: green;
+    overflow: auto;
+}
+
+.search a{
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+    border-color: green;
+}
+
+.search a:hover {
+    background-color: #1b5e20;
+    color: white;
+}
+
+img.avatar{
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+}
+
+img.logo{
+    width: 50px;
+    height: 35px;
+    padding: 8px 0 0 0;
+}
+
+div.menu{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display : flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    background-color: white;
+    height : 100px;
+    flex-direction: row-reverse;
+    padding: 50px 0 0 0;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -webkit-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+    z-index:9;
+}
+.hide {
+    display: none;
+}
+
+.show {
+    display: initial;
+}
+
+.chat-button {
+    margin-bottom: 3%;
+    margin-left: 1%;
+}

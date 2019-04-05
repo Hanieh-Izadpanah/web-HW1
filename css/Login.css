@@ -1,0 +1,253 @@
+.white-square {
+    width:600px;
+    height:400px;
+    background-color: white;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.green-square {
+    width:200px;
+    height:450px;
+    background-color:green;
+    float: left;
+    position: relative;
+}
+
+.form-square{
+    width:400px;
+    height:450px;
+    background-color: white;
+    float: right;
+    position: relative;
+}
+.row {
+    float: right;
+    position: relative;
+    right: 12%;
+    height: 50% !important;
+}
+
+.middle1 {
+    top: 100px;
+}
+
+.middle2 {
+    top: 110px;
+}
+
+.validate:focus + .label,
+.validate:valid + .label {
+    width: 200px;
+    height: 20px;
+    text-align: right;
+    font-size: 50%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+}
+
+.error-message {
+    float: right;
+    position: relative;
+    right: 11%;
+    font-size: x-small;
+    direction: rtl;
+}
+.label {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    padding-top: 7px;
+    padding-right: 10px;
+    padding-left: 13px;
+    padding-bottom: 0;
+    transition: all 200ms;
+    opacity: 0;
+    text-align: right;
+    float: right;
+    font-size: x-small;
+
+}
+
+input {
+    width: 320px;
+    font-size: small;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+input:focus {
+    border-color: green
+}
+
+.name-image {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url("../images/name.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.email-image {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url("../images/email.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pass-image {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url("../images/password.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.register-button {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: small;
+    position: absolute;
+    margin: 0;
+    top: 75%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.register-google-button {
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    font-size: small;
+    position: absolute;
+    margin: 0;
+    top: 85%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.google-icon {
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-image: url("../images/google-plus.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button:focus {
+    outline: none;
+}
+
+#green-square-register-image {
+    width:100px;
+    height:100px;
+    position: absolute;
+    border-radius: 80%;
+    margin: 0;
+    top: 20%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../images/graduation-hat.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #19692c;
+}
+
+#green-square-register-titleContent {
+    width:150px;
+    height:100px;
+    position: absolute;
+    text-align: center;
+    font-size: large;
+    color: white;
+    margin: 0;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#green-square-register-textContent {
+    width:150px;
+    height:100px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: x-small;
+    direction: rtl;
+    margin: 0;
+    top: 68%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#green-square-gotoLogin-button {
+    width:50px;
+    height:50px;
+    position: absolute;
+    border-radius: 80%;
+    border: none;
+    outline:none;
+    margin: 0;
+    top: 80%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-image: url("../images/left-chevron.png");
+
+}
+
+#green-square-gotoRegister-button {
+    width:50px;
+    height:50px;
+    position: absolute;
+    border-radius: 80%;
+    border: none;
+    outline:none;
+    margin: 0;
+    top: 80%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-image: url("../images/right-chevron.png");
+
+}

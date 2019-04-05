@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../js/app.js"></script>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: B Nazanin;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <ul class = "nav ">
+            <div class = "search">
+                <img src="../images/avatar.png" alt="Avatar" class = "avatar">
+                <a href="#search"><i class="fa fa-search"></i></a>
+            </div>
+            <ul id ="navigation" class = "inside" >
+                <a id = "main" class = "navigate" href="#main">صفحه اصلی</a>
+                <a id = "educate" class = "navigate" href="#educate">آموزش</a>
+                <a id = "blog" class = "navigate" href="#blog">بلاگ</a>
+                <a id = "download" class = "navigate" href="#download">دانلود</a>
+                <a id = "policy" class = "navigate" href="#policy">قوانین</a>
+                <a id = "contact" class = "navigate" href="#contact">تماس با ما</a>
+                <a id = "about" class = "navigate" href="#about">درباره ما</a>
+            </ul>
+            <ul class = "outside">
+                <li class = "outside"><text>مکتب خانه دانشگاه شهید بهشتی</text><img class = "logo" src="../images/icon.png" alt="Logo" ></li>
+            </ul>
+        </ul>
+
+        <div id = "menu" class = "menu">
+            <text id = "defaultMenu" class ="subnav show" style = "color: black">منتشر شد Principle دوره آموزش های ضروری  </text>
+            <text id = "defaultMenu" class = "subnav show" style = "color: black">مکتب خانه اول آبان 1396 رسما شروع به فعالیت می کند</text>
+            <text id = "defaultMenu" class = "subnav show" style = "color: black">مکتب خانه در شبکه های اجتماعی</text>
+            <text id = "downloadMenu" class = "subnav hide" style = "color: black">قالب سایت</text>
+            <text id = "downloadMenu" class = "subnav hide" style = "color: black">گرافیک</text>
+            <text id = "downloadMenu" class = "subnav hide" style = "color: black">فایل صوتی</text>
+            <text id = "downloadMenu" class = "subnav hide" style = "color: black">سه بعدی و ویدیو</text>
+            <text id = "downloadMenu" class = "subnav hide" style = "color: black">برنامه نویسی</text>
+            <text id = "educateMenu" class = "subnav hide" style = "color: black">وب نویسی</text>
+            <text id = "educateMenu" class = "subnav hide" style = "color: black">گرافیک</text>
+            <text id = "educateMenu" class = "subnav hide" style = "color: black">آهنگ و تدوین صدا</text>
+            <text id = "educateMenu" class = "subnav hide" style = "color: black">سه بعدی و ویدیو</text>
+            <text id = "educateMenu" class = "subnav hide" style = "color: black">برنامه نویسی</text>
+        </div>
+    </div>
+</div>
+<script>
+    var navigation = document.getElementById("navigation");
+    var choices = navigation.getElementsByClassName("navigate");
+    var menu = document.getElementById("menu");
+    var curMen = menu.getElementsByClassName("subnav");
+    for (var i = 0;i<choices.length; i++){
+        choices[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("navigate active");
+            if(current.length != 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+            if(this.id == "download"){
+                this.className += " active";
+                for(var j=0;j<curMen.length;j++){
+                    if(curMen[j].id == "downloadMenu")
+                        curMen[j].className = curMen[j].className.replace(" hide"," show");
+                    else
+                        curMen[j].className = curMen[j].className.replace(" show"," hide");
+                }
+            }
+            else if(this.id == "educate"){
+                this.className += " active";
+                for(var j=0;j<curMen.length;j++){
+                    if(curMen[j].id == "educateMenu")
+                        curMen[j].className = curMen[j].className.replace(" hide"," show");
+                    else
+                        curMen[j].className = curMen[j].className.replace(" show"," hide");
+                }
+            }
+            else{
+                for(var j=0;j<curMen.length;j++){
+                    if(curMen[j].id == "defaultMenu")
+                        curMen[j].className = curMen[j].className.replace(" hide"," show");
+                    else
+                        curMen[j].className = curMen[j].className.replace(" show"," hide");
+                }
+            }
+        });
+    }
+</script>
+<!--studying image-->
+<div class="container">
+    <div class="row">
+        <div class="span3 col-3"></div>
+        <div class="span6 col-6"><img class="col-12" id = "studyingPic" src="../images/studying.png"/></div>
+        <div class="span3 col-3"></div>
+    </div>
+</div>
+<!--studying image-->
+<br>
+<!--search bar-->
+<div class="container">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <form id = "searchBarMiddle" class="input-group">
+                <button class="fa fa-search btn" type="button"></button>
+                <input type="text" class="form-control" placeholder="در میان هزار مطلب جستجو کنید">
+            </form>
+        </div>
+    </div>
+</div>
+<!--search bar-->
+<br>
+<!--photoshop principle-->
+<div class="container">
+    <div class="row">
+        <div class="col-6 rightPadding">
+            <img class="col-12 withShadow" id="photoshopPic" src="../images/photoshop.png">
+        </div>
+        <div class="col-6 leftPadding">
+            <img class="col-12 withShadow" id="principlePic" src="../images/principle.png">
+        </div>
+    </div>
+</div>
+<!--photoshop principle-->
+<br>
+<!--matlab photography sketch-->
+<div class="container">
+    <div class="row">
+        <div class="col-4 rightPadding ">
+            <img class="col-12 withShadow" id="matlabPic" src="../images/matlab.png">
+        </div>
+        <div class="col-4 rightPadding ">
+            <img class="col-12 withShadow" id="photographyPic" src="../images/photography.png">
+        </div>
+        <div class="col-4 leftPadding ">
+            <img class="col-12 withShadow" id="sketchPic" src="../images/sketch.png">
+        </div>
+    </div>
+</div>
+<!--matlab photography sketch-->
+<br>
+<!--first parallax-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12" style="padding-right: 0">
+            <div class="first-parallax">
+                <div class="overlay">
+                    <div class="parallax-title">چرا باید از مکتب خانه استفاده کرد؟</div>
+                    <div class="left-number"><b>193</b></div>
+                    <div class="left-text">دوره آموزشی</div>
+                    <div class="middle-left-number"><b>2133</b></div>
+                    <div class="middle-left-text">فایل آماده</div>
+                    <div class="middle-right-number"><b>25</b></div>
+                    <div class="middle-right-text">مدرس</div>
+                    <div class="right-number"><b>509</b></div>
+                    <div class="right-text">ویدئو آموزشی</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--first parallax-->
+<br>
+<!--tab bar-->
+<!--tab bar-->
+<br>
+<!--second parallax-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12" style="padding-right: 0">
+            <div class="second-parallax">
+                <div class="overlay">
+                    <div class="parallax-title">طراحی دوست داری ولی نمیدونی از کجا شروع کنی؟</div>
+                    <div class="parallax-text">ما برات نقشه راهو کشیدیم و همه رو بهت آموزش میدیم</div>
+                    <button class="parallax-button">میخوام طراح بشم&nbsp;&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--second parallax-->
+<br>
+<!--blog-->
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div id="first-blog-title">عنوان پست بلاگ</div>
+        </div>
+        <div class="col-4">
+            <div id="second-blog-title">عنوان پست بلاگ 2</div>
+        </div>
+        <div class="col-4">
+            <div id="third-blog-title">عنوان پست بلاگ 3</div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-4" style="height: 50%;">
+            <div class="first-blog" onmouseover="showBlogTitle1()" onmouseleave="hideBlogTitle1()">
+                <div class="blog-image"><img src="../images/parallax.jpg" class="img-fluid"></div>
+            </div>
+            <div><img src="../images/parallax.jpg" style="width: 50px; height: 50px;"></img></div>
+        </div>
+        <div class="col-4">
+            <div class="second-blog" onmouseover="showBlogTitle2()" onmouseleave="hideBlogTitle2()">
+                <div class="blog-image"><img src="../images/parallax.jpg" class="img-fluid"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="third-blog" onmouseover="showBlogTitle3()" onmouseleave="hideBlogTitle3()">
+                <div class="blog-image"><img src="../images/parallax.jpg" class="img-fluid"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--blog-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--chat button-->
+<div class="container chat-button">
+    <div class="row">
+        <div class="col-3"><img src="../images/question-speech-bubble.png" style="width: 40px;height: 40px;"></div>
+    </div>
+</div>
+<!--chat button-->
+<br>
+<!--footer-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <ul class="footer">
+                <div><img src="../images/footer.png" class="footer-image mx-auto"></div>
+                <div class="footer-text">تمامی حقوق وبسایت نزد دانشگاه شهید بهشتی محفوظ است</div>
+                <div style="display: flex;justify-content: space-around;">
+                    <a class="fa fa-instagram footer-icon"></a>
+                    <a class = "fa fa-phone footer-icon"></a>
+                    <a class="fa fa-telegram footer-icon"></a>
+                    <a class="fa fa-linkedin-square footer-icon"></a>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+
+</body>
+</html>
